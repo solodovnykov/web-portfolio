@@ -1,0 +1,80 @@
+@import "../../styles/Constants.module.scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: $primary-color-5;
+  min-width: 300px;
+  border: .5px solid $primary-color-20;
+
+  .head {
+    border-radius: 12px 12px 0 0;
+    height: 150px;
+    background-image: url("/assets/Gradient.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+    .title {
+      font-family: "Gilroy", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 37px;
+      color: $primary-color-80;
+      margin: 0 0 6px 0;
+    }
+
+    .tags {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      list-style: none;
+      margin: 0 0 20px 0;
+      padding: 0;
+
+      .tag {
+        font-family: "SFProText", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $primary-color-60;
+      }
+    }
+
+    .description {
+      font-family: "SFProText", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: $primary-color-60;
+      margin: 0 0 28px 0;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .date {
+        font-family: "SFProText";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: $primary-color-40;
+      }
+    }
+  }
+}

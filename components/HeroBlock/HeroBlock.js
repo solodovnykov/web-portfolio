@@ -13,7 +13,7 @@ const HeroBlock = () => {
             Розробка e-commerce додатків та <br /> проєктування інтерфейсів.
           </h2>
           <div className={styles.btnWrapper}>
-            <Button />
+            <Button icon="iconWorks.svg">Приклади робіт</Button>
             <p className={styles.skills}>Навички</p>
           </div>
         </div>

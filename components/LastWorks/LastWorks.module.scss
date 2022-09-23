@@ -1,3 +1,39 @@
+@import "../../styles/Constants.module.scss";
+
 .lastWorks {
-  margin: 200px 0 250px 0;
+  margin: 0 0 250px 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 15;
+  position: relative;
+  width: 100%;
+
+  .cardList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    width: 100%;
+    position: relative;
+    padding: 0 0 20px 0;
+    margin: 0;
+    overflow-x: auto;
+
+  }
+
+  &::after {
+    content: "";
+    top: 0;
+    right: -1px;
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    background: linear-gradient(90deg, rgba(20, 20, 21, 0) 0%, #141415 100%);
+    pointer-events: none;
+    display: none;
+
+    @media (max-width: $breakpoint-laptop) {
+      display: inherit;
+    }
+  }
 }
