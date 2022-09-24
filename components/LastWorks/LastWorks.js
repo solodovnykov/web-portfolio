@@ -18,11 +18,13 @@ const LastWorks = () => {
             />
           </a>
         </div>
-        <ul className={styles.cardList}>
-          <Card />
-          <Card />
-          <Card />
-        </ul>
+        <div className={styles.cardListWrapper}>
+          <ul className={styles.cardList}>
+            <Card />
+            <Card />
+            <Card />
+          </ul>
+        </div>
       </div>
     </div>
   );

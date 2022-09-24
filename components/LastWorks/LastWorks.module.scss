@@ -45,31 +45,56 @@
     }
   }
 
-  .cardList {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 24px;
-    width: 100%;
+  .cardListWrapper {
     position: relative;
-    padding: 0 0 20px 0;
-    margin: 0;
-    overflow-x: auto;
-  }
+    .cardList {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 24px;
+      width: 100%;
+      position: relative;
+      padding: 0 0 20px 0;
+      margin: 0;
+      overflow-x: auto;
 
-  &::after {
-    content: "";
-    top: 0;
-    right: -1px;
-    position: absolute;
-    height: 100%;
-    width: 100px;
-    background: linear-gradient(90deg, rgba(20, 20, 21, 0) 0%, #141415 100%);
-    pointer-events: none;
-    display: none;
+      &::-webkit-scrollbar-track {
+        background: transparent;
+        height: 8px;
+        background: $primary-color-5;
+        border-radius: 10px;
+      }
 
-    @media (max-width: $breakpoint-laptop) {
-      display: inherit;
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: $primary-color-20;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #4a5158;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    &::after {
+      content: "";
+      top: 0;
+      right: -1px;
+      position: absolute;
+      height: 100%;
+      width: 100px;
+      background: linear-gradient(90deg, rgba(20, 20, 21, 0) 0%, #141415 100%);
+      pointer-events: none;
+      display: none;
+
+      @media (max-width: $breakpoint-laptop) {
+        display: inherit;
+      }
     }
   }
 }
