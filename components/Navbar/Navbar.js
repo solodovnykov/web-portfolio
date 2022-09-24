@@ -11,7 +11,8 @@ const navigation = [
     path: "/",
     secondPath: "",
     anchor: false,
-    iconPath: "",
+    type: "default",
+    iconPath: "/assets/icons/IconHome.svg",
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ const navigation = [
     path: "/works",
     secondPath: "",
     anchor: false,
-    iconPath: "",
+    type: "default",
+    iconPath: "/assets/icons/IconWorks.svg",
   },
   {
     id: 3,
@@ -27,7 +29,8 @@ const navigation = [
     path: "/cv",
     secondPath: "",
     anchor: false,
-    iconPath: "",
+    type: "default",
+    iconPath: "/assets/icons/IconCV.svg",
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ const navigation = [
     path: "#",
     secondPath: "",
     anchor: false,
+    type: "icon",
     iconPath: "/assets/IconGithubLight.svg",
   },
   {
@@ -43,6 +47,7 @@ const navigation = [
     path: "#",
     secondPath: "",
     anchor: false,
+    type: "icon",
     iconPath: "/assets/IconLinkedinLight.svg",
   },
 ];
@@ -63,12 +68,17 @@ const Navbar = () => {
                     <a>
                       {link.title ? link.title : ""}
                       {link.iconPath ? (
-                        <Image
-                          src={link.iconPath}
-                          alt="Image description"
-                          width="16"
-                          height="16"
-                        />
+                        <span
+                          className={
+                            link.type === "default" ? styles.iconWrapper : ""
+                          }>
+                          <Image
+                            src={link.iconPath}
+                            alt="Image description"
+                            width="16"
+                            height="16"
+                          />
+                        </span>
                       ) : (
                         ""
                       )}
