@@ -1,6 +1,5 @@
 import styles from "./Button.module.scss";
 import Image from "next/image";
-import { useEffect, useState } from "react";
 
 const Button = ({ children = "button", size, icon, type }) => {
   const button = {
@@ -18,18 +17,12 @@ const Button = ({ children = "button", size, icon, type }) => {
     fontSize: size === "small" ? "14px" : "16px",
   };
 
-  const iconStyle = {
-    display: icon ? "" : "none",
-  };
-
-  // console.log(btnStyle);
-
   return (
     <button style={button} className={styles.button}>
       <p style={innerText} className={styles.buttonText}>
         {children}
       </p>
-      <span style={iconStyle}>
+      <span className={icon ? " " : styles.imageHide}>
         <Image
           src={`/assets/${icon}`}
           alt="icon"
