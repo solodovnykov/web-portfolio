@@ -62,10 +62,13 @@
     gap: 24px;
 
     .createdBy {
-
       .authorLink {
         color: $primary-color-60;
       }
     }
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    margin: 0 0 92px 0;
   }
 }
