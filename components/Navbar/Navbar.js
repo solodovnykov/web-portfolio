@@ -3,6 +3,7 @@ import styles from "./Navbar.module.scss";
 import { useIntl } from "react-intl";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const navigation = [
   {
@@ -13,6 +14,7 @@ const navigation = [
     anchor: false,
     type: "default",
     iconPath: "/assets/icons/IconHome.svg",
+    svg: ``,
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const navigation = [
     anchor: false,
     type: "default",
     iconPath: "/assets/icons/IconWorks.svg",
+    svg: ``,
   },
   {
     id: 3,
@@ -31,6 +34,7 @@ const navigation = [
     anchor: false,
     type: "default",
     iconPath: "/assets/icons/IconCV.svg",
+    svg: ``,
   },
   {
     id: 4,
@@ -40,6 +44,7 @@ const navigation = [
     anchor: false,
     type: "icon",
     iconPath: "/assets/IconGithubLight.svg",
+    svg: ``,
   },
   {
     id: 5,
@@ -49,11 +54,14 @@ const navigation = [
     anchor: false,
     type: "icon",
     iconPath: "/assets/IconLinkedinLight.svg",
+    svg: ``,
   },
 ];
 
 const Navbar = () => {
+  const router = useRouter();
   const { formatMessage: f } = useIntl();
+
   return (
     <div className={styles.navbarWrapper}>
       <div className="container">
@@ -65,7 +73,10 @@ const Navbar = () => {
               {navigation.map((link) => (
                 <li key={link.id}>
                   <Link href={link.path + link.secondPath}>
-                    <a>
+                    <a
+                      className={
+                        router.pathname === link.path ? styles.activeLink : ""
+                      }>
                       {link.title ? link.title : ""}
                       {link.iconPath ? (
                         <span

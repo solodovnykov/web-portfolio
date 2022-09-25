@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   margin: 100px 0 200px 0;
+  position: relative;
+  z-index: 2;
 
   .title {
     color: $primary-color-80;
@@ -13,6 +15,10 @@
     line-height: 90%;
     margin: 0;
     white-space: nowrap;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 36px;
+    }
   }
 
   .subtitle {
@@ -24,6 +30,10 @@
     letter-spacing: 0.02em;
     white-space: nowrap;
     margin: 20px 0 0 0;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 14px;
+    }
   }
 
   .btnWrapper {
@@ -42,6 +52,10 @@
       line-height: 130%;
       letter-spacing: 0.02em;
       margin: 0;
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 14px;
+      }
     }
   }
 }
