@@ -16,6 +16,12 @@
     margin: 0;
     white-space: nowrap;
 
+    @media (max-width: $breakpoint-laptop) {
+      font-size: 64px;
+    }
+    @media (max-width: $breakpoint-tablet) {
+      font-size: 52px;
+    }
     @media (max-width: $breakpoint-mobile) {
       font-size: 36px;
     }
@@ -31,7 +37,7 @@
     white-space: nowrap;
     margin: 20px 0 0 0;
 
-    @media (max-width: $breakpoint-mobile) {
+    @media (max-width: $breakpoint-tablet) {
       font-size: 14px;
     }
   }
@@ -58,6 +64,8 @@
       }
     }
   }
+
+  @media (max-width: $breakpoint-tablet) {
+    margin: 50px 0 200px 0;
+  }
 }
-
-
