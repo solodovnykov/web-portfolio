@@ -1,9 +1,32 @@
 import Button from "../Button/Button";
 import styles from "./Card.module.scss";
+import { motion } from "framer-motion";
+
+const easing = [0.6, -0.05, 0.01, 0.99];
+
+const fadeInUp = {
+  initial: {
+    y: 60,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: easing,
+    },
+  },
+};
 
 const Card = ({ minWidth = 0 }) => {
   return (
-    <div style={{ minWidth: `${minWidth}px` }} className={styles.card}>
+    <motion.div
+      variants={fadeInUp}
+      initial="initial"
+      animate="animate"
+      style={{ minWidth: `${minWidth}px` }}
+      className={styles.card}>
       <div className={styles.head} />
       <div className={styles.body}>
         <h3 className={styles.title}>Some title</h3>
@@ -29,7 +52,7 @@ const Card = ({ minWidth = 0 }) => {
           </Button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

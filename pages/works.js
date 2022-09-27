@@ -1,11 +1,24 @@
 import Card from "../components/Card/Card";
 import styles from "../styles/Works.module.scss";
+import { motion } from "framer-motion";
+
+const stagger = {
+  animate: {
+    transition: {
+      staggerChildren: 0.05,
+    },
+  },
+};
 
 const Works = () => {
   return (
-    <div className="container">
+    <motion.div
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
+      initial="initial"
+      animate="animate"
+      className="container">
       <div className={styles.works}>
-        <ul className={styles.cardList}>
+        <motion.ul variants={stagger} className={styles.cardList}>
           <li>
             <Card />
           </li>
@@ -25,9 +38,9 @@ const Works = () => {
           <li>
             <Card />
           </li>
-        </ul>
+        </motion.ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
