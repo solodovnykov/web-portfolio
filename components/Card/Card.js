@@ -1,9 +1,9 @@
 import Button from "../Button/Button";
 import styles from "./Card.module.scss";
 
-const Card = () => {
+const Card = ({ minWidth = 0 }) => {
   return (
-    <div className={styles.card}>
+    <div style={{ minWidth: `${minWidth}px` }} className={styles.card}>
       <div className={styles.head} />
       <div className={styles.body}>
         <h3 className={styles.title}>Some title</h3>

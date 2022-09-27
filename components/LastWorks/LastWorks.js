@@ -20,9 +20,9 @@ const LastWorks = () => {
         </div>
         <div className={styles.cardListWrapper}>
           <ul className={styles.cardList}>
-            <Card />
-            <Card />
-            <Card />
+            <Card minWidth={300} />
+            <Card minWidth={300} />
+            <Card minWidth={300} />
           </ul>
         </div>
       </div>

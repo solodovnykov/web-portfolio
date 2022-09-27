@@ -1,0 +1,16 @@
+.works {
+  margin: 150px 0 250px 0;
+  .cardList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    // grid-auto-rows: 30px;
+
+    // grid-gap: 30px;
+    gap: 30px;
+  }
+}

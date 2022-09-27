@@ -53,6 +53,10 @@
         justify-content: center;
       }
     }
+
+    @media (max-width: $breakpoint-mobile) {
+      gap: 24px;
+    }
   }
 
   .body {
@@ -66,9 +70,20 @@
         color: $primary-color-60;
       }
     }
+
+    .copyright {
+      text-align: center;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
   }
 
   @media (max-width: $breakpoint-mobile) {
     margin: 0 0 92px 0;
+    gap: 20px;
   }
 }
