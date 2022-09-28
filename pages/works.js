@@ -1,6 +1,7 @@
 import Card from "../components/Card/Card";
 import styles from "../styles/Works.module.scss";
 import { motion } from "framer-motion";
+import Search from "../components/InputFields/Search/Search";
 
 const stagger = {
   animate: {
@@ -18,26 +19,15 @@ const Works = () => {
       animate="animate"
       className="container">
       <div className={styles.works}>
+        <div className={styles.navigation}>
+          <Search />
+        </div>
         <motion.ul variants={stagger} className={styles.cardList}>
-          <li>
-            <Card />
-          </li>
-          <li>
-            <Card />
-          </li>
-          <li>
-            <Card />
-          </li>
-
-          <li>
-            <Card />
-          </li>
-          <li>
-            <Card />
-          </li>
-          <li>
-            <Card />
-          </li>
+          {[...Array(6)].map((card, index) => (
+            <li key={index}>
+              <Card />
+            </li>
+          ))}
         </motion.ul>
       </div>
     </motion.div>

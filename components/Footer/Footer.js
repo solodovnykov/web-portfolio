@@ -50,7 +50,13 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.head}>
-          <div className={styles.logo} />
+          {/* <div className={styles.logo} /> */}
+          <Image
+            src={"/assets/LogoDark.svg"}
+            width={30}
+            height={30}
+            alt="logo"
+          />
           <ul className={styles.linkList}>
             {navigation.map((link) => (
               <li key={link.id}>

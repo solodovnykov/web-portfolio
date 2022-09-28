@@ -1,5 +1,16 @@
 .works {
   margin: 150px 0 250px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .cardList {
     list-style: none;
     margin: 0;

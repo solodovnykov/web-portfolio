@@ -6,7 +6,7 @@
   border-radius: 12px;
   background: $primary-color-5;
   min-width: 300px;
-  border: .5px solid $primary-color-20;
+  border: 0.5px solid $primary-color-20;
   scroll-snap-align: start;
 
   .head {
@@ -31,6 +31,10 @@
       line-height: 37px;
       color: $primary-color-80;
       margin: 0 0 6px 0;
+
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 20px;
+      }
     }
 
     .tags {
@@ -49,6 +53,10 @@
         font-size: 14px;
         line-height: 17px;
         color: $primary-color-60;
+      }
+
+      @media (max-width: $breakpoint-tablet) {
+        margin: 0 0 16px 0;
       }
     }
 

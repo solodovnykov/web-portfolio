@@ -139,3 +139,24 @@ a {
     transform: translate(-1%, 7%);
   }
 }
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  width: 10px;
+  background: #111;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(126, 135, 139, 0.6);
+  transition: all 0.2s ease-in-out;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #4a5158;
+  transition: all 0.2s ease-in-out;
+}

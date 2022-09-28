@@ -66,7 +66,13 @@ const Navbar = () => {
     <div className={styles.navbarWrapper}>
       <div className="container">
         <nav className={styles.navbar}>
-          <div className={styles.logo} />
+          {/* <div className={styles.logo} /> */}
+          <Image
+            src={"/assets/LogoLight.svg"}
+            width={30}
+            height={30}
+            alt="logo"
+          />
 
           <div className={styles.navbarRightPart}>
             <ul className={styles.linkList}>

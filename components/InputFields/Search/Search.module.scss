@@ -1,0 +1,96 @@
+@import "../../../styles/Constants.module.scss";
+
+.form {
+  position: relative;
+  width: 200px;
+  height: 40px;
+
+  .searchField {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid $primary-color-40;
+    border-radius: 6px;
+
+    outline: none;
+    padding: 4px 4px 4px 12px;
+    box-sizing: border-box;
+    background: none;
+    color: $primary-color-80;
+
+    font-family: "SFProText", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:hover {
+      border-color: $primary-color-50;
+    }
+
+    &:focus {
+      border-color: $primary-color-80;
+    }
+
+    &:-webkit-autofill {
+      -webkit-text-fill-color: $primary-color-80;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  }
+
+  .label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 2px;
+    color: $primary-color-40;
+
+    font-family: "SFProText", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    cursor: text;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    background-color: $bg-color;
+  }
+
+  .button {
+    position: absolute;
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    background-color: $primary-color-20;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+/* 
+1. When the input is in the focus state
+reduce the size of the label and move upwards 
+
+2. Keep label state when content is in input field 
+*/
+
+.searchField:focus ~ .label,
+.searchField:not(:placeholder-shown).searchField:not(:focus) ~ .label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 10px;
+  left: 6px;
+  color: $primary-color-80;
+}
