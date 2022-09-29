@@ -3,6 +3,8 @@ import styles from "../styles/Works.module.scss";
 import { motion } from "framer-motion";
 import Search from "../components/InputFields/Search/Search";
 
+import Data from "../utils/Data.json";
+
 const stagger = {
   animate: {
     transition: {
@@ -20,7 +22,7 @@ const Works = () => {
       className="container">
       <div className={styles.works}>
         <div className={styles.navigation}>
-          <Search />
+          <Search data={Data} />
         </div>
         <motion.ul variants={stagger} className={styles.cardList}>
           {[...Array(6)].map((card, index) => (
