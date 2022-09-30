@@ -7,6 +7,7 @@ import styles from "./Search.module.scss";
 const Search = ({ data }) => {
   const resultRef = useRef();
   const inputRef = useRef();
+  const searchFormRef = useRef();
   const [inputValue, setInputValue] = useState("");
   const [isOpen, setIsOpen] = useState(true);
 
@@ -55,6 +56,22 @@ const Search = ({ data }) => {
     };
   }, [hasFilteredData, inputValue]);
 
+  useEffect(() => {
+    const closeDropdown = (event) => {
+      if (
+        isOpen &&
+        searchFormRef.current &&
+        !searchFormRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", closeDropdown);
+
+    return () => document.addEventListener("mousedown", closeDropdown);
+  }, [isOpen]);
+
   const onKeyDown = (event) => {
     const isUp = event.key === "ArrowUp";
     const isDown = event.key === "ArrowDown";
@@ -100,7 +117,7 @@ const Search = ({ data }) => {
   };
 
   return (
-    <form className={styles.form}>
+    <form ref={searchFormRef} className={styles.form}>
       <input
         ref={inputRef}
         className={styles.searchField}
