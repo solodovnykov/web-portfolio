@@ -1,0 +1,61 @@
+@import "../../styles/Constants.module.scss";
+
+.pagination {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 0.5px solid $primary-color-40;
+  border-radius: 6px;
+  padding: 0 4px;
+  box-sizing: border-box;
+
+  .paginationItem {
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "SFProText", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.03em;
+    color: $primary-color-40;
+    cursor: pointer;
+
+    .arrowLeft {
+      transform: rotate(90deg);
+    }
+
+    .arrowRight {
+      transform: rotate(-90deg);
+    }
+
+    &.arrowButton {
+      min-width: 32px;
+      height: 32px;
+      border-radius: 2px;
+      background: $primary-color-20;
+    }
+
+    &.disabled {
+      pointer-events: none;
+    }
+  
+    &.dots {
+      cursor: default;
+    }
+  
+    &.selected {
+      color: $primary-color-80;
+      text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  
+}

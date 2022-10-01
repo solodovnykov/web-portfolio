@@ -1,0 +1,150 @@
+@import "../../../styles/Constants.module.scss";
+
+.dropdownFilter {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  height: 40px;
+  // margin: 0 63.6px 0 0;
+
+  .head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid $primary-color-40;
+    border-radius: 6px;
+
+    outline: none;
+    padding: 4px 4px 4px 12px;
+    box-sizing: border-box;
+    background: none;
+    color: $primary-color-80;
+
+    font-family: "SFProText", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    &:hover {
+      border-color: $primary-color-50;
+    }
+
+    &:focus {
+      border-color: $primary-color-80;
+    }
+
+    p {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 12px;
+      margin: 0;
+      color: $primary-color-40;
+    }
+
+    .button {
+      position: absolute;
+      min-width: 32px;
+      height: 32px;
+
+      border-radius: 2px;
+      background-color: $primary-color-20;
+      top: 50%;
+      right: 4px;
+      transform: translateY(-50%);
+      padding: 0;
+      margin: 0;
+      border: none;
+      outline: none;
+      cursor: pointer;
+
+      span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .label {
+      position: absolute;
+
+      top: 0;
+      transform: translateY(-50%);
+      left: 6px;
+      padding: 0 2px;
+      color: $primary-color-40;
+
+      font-family: "SFProText", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 17px;
+
+      cursor: text;
+      transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+      background-color: $bg-color;
+    }
+  }
+
+  .itemList {
+  }
+
+  .itemList {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(calc(100% + 8px));
+    width: 100%;
+    background: rgba(38, 38, 38, 0.85);
+    backdrop-filter: blur(18px);
+    border-radius: 6px;
+    margin: 0;
+    padding: 0 6px 0 11px;
+    box-sizing: border-box;
+    list-style: none;
+
+    li {
+      cursor: pointer;
+      margin: 6px 0;
+
+      a {
+        font-family: "SFProText", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $primary-color-40;
+        pointer-events: none;
+
+        &:focus {
+          outline: none;
+          color: $primary-color-60;
+          text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
+        }
+
+        &:hover {
+          color: $primary-color-60;
+          text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
+        }
+      }
+
+      // &:first-child {
+      //   margin: 6px 0 2px 0;
+      // }
+
+      // &:last-child {
+      //   margin: 2px 0 6px 0;
+      // }
+    }
+  }
+}
+
+.head:focus .label {
+  color: $primary-color-80;
+}
