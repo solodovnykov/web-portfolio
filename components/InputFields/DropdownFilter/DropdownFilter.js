@@ -41,14 +41,15 @@ const DropdownFilter = () => {
         </button>
       </div>
 
-      <ul className={styles.itemList}>
-        {dropdown ? (
-          <li>
-            <a href="">Item</a>
-          </li>
-        ) : (
-          ""
-        )}
+      <ul
+        style={{
+          height: dropdown ? "auto" : "0",
+          opacity: dropdown ? "1" : "0",
+        }}
+        className={styles.itemList}>
+        <li>
+          <a href="">Item</a>
+        </li>
       </ul>
     </div>
   );

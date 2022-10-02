@@ -12,6 +12,7 @@
   border-radius: 6px;
   padding: 0 4px;
   box-sizing: border-box;
+  user-select: none;
 
   .paginationItem {
     min-width: 32px;
@@ -27,6 +28,7 @@
     letter-spacing: 0.03em;
     color: $primary-color-40;
     cursor: pointer;
+    transition: 0.1s all ease-in-out;
 
     .arrowLeft {
       transform: rotate(90deg);
@@ -41,21 +43,24 @@
       height: 32px;
       border-radius: 2px;
       background: $primary-color-20;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
     }
 
     &.disabled {
       pointer-events: none;
     }
-  
+
     &.dots {
       cursor: default;
     }
-  
+
     &.selected {
       color: $primary-color-80;
       text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.25);
+      transition: 0.1s all ease-in-out;
     }
   }
-
-  
 }

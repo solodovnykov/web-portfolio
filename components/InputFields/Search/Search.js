@@ -28,9 +28,7 @@ const Search = ({ data }) => {
 
   const arrowKeysHandler = (e) => {
     if (
-      ["Space", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(
-        e.code
-      ) > -1
+      ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1
     ) {
       e.preventDefault();
     }
@@ -141,8 +139,14 @@ const Search = ({ data }) => {
         />
       </button>
 
-      <ul ref={resultRef} className={styles.autocompleteList}>
-        {inputValue && isOpen
+      <ul
+        ref={resultRef}
+        style={{
+          height: inputValue && isOpen ? "auto" : "0",
+          opacity: inputValue && isOpen ? "1" : "0",
+        }}
+        className={styles.autocompleteList}>
+        {filteredData
           ? filteredData.slice(0, 4).map((item) => (
               <li onClick={itemClickHandler} key={item.id}>
                 <a href="">{item.title}</a>

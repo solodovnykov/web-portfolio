@@ -25,13 +25,16 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    transition: 0.1s all ease-in-out;
 
     &:hover {
       border-color: $primary-color-50;
+      transition: 0.1s all ease-in-out;
     }
 
     &:focus {
       border-color: $primary-color-80;
+      transition: 0.1s all ease-in-out;
     }
 
     &:-webkit-autofill {
@@ -76,6 +79,12 @@
     border: none;
     outline: none;
     cursor: pointer;
+    transition: 0.1s all ease-in-out;
+
+    &:hover {
+      filter: brightness(1.2);
+      transition: 0.1s all ease-in-out;
+    }
   }
 
   .autocompleteList {
@@ -93,6 +102,7 @@
     padding: 0 6px 0 11px;
     box-sizing: border-box;
     list-style: none;
+    transition: 0.1s all ease-in-out;
 
     li {
       cursor: pointer;
@@ -106,15 +116,18 @@
         line-height: 17px;
         color: $primary-color-40;
         pointer-events: none;
+        transition: 0.1s all ease-in-out;
 
         &:focus {
           outline: none;
           color: $primary-color-60;
+          transition: 0.1s all ease-in-out;
           text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
         }
 
         &:hover {
           color: $primary-color-60;
+          transition: 0.1s all ease-in-out;
           text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.4);
         }
       }
@@ -144,4 +157,5 @@ reduce the size of the label and move upwards
   font-size: 10px;
   left: 6px;
   color: $primary-color-80;
+  transition: 0.1s all ease-in-out;
 }

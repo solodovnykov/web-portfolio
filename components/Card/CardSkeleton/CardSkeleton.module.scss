@@ -1,0 +1,27 @@
+.cardSkeleton {
+  .body {
+    padding: 16px;
+    .tags {
+      max-width: 200px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 24px 0 0 0;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin: 46px 0 4.6px 0;
+    }
+  }
+}

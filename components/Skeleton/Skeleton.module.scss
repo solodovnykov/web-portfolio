@@ -1,0 +1,31 @@
+@import "../../styles/Constants.module.scss";
+
+.skeleton {
+  background-color: $primary-color-20;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      $primary-color-20 0%,
+      $primary-color-30 47.71%,
+      $primary-color-20 100%
+    );
+    animation: shimmer 2s infinite;
+    content: "";
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}

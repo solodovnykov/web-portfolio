@@ -7,6 +7,8 @@ import Data from "../utils/Data.json";
 import DropdownFilter from "../components/InputFields/DropdownFilter/DropdownFilter";
 import Pagination from "../components/Pagination/Pagination";
 import { useState } from "react";
+import Skeleton from "../components/Skeleton/Skeleton";
+import CardSkeleton from "../components/Card/CardSkeleton/CardSkeleton";
 
 const stagger = {
   animate: {
@@ -35,6 +37,12 @@ const Works = () => {
           />
         </div>
         <motion.ul variants={stagger} className={styles.cardList}>
+          {/* {[...Array(6)].map((card, index) => (
+            <li key={index}>
+              <CardSkeleton />
+            </li>
+          ))} */}
+
           {[...Array(6)].map((card, index) => (
             <li key={index}>
               <Card />

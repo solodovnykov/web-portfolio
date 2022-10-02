@@ -6,7 +6,6 @@
   flex-direction: column;
   width: 140px;
   height: 40px;
-  // margin: 0 63.6px 0 0;
 
   .head {
     position: absolute;
@@ -16,7 +15,7 @@
     height: 100%;
     border: 0.5px solid $primary-color-40;
     border-radius: 6px;
-
+    user-select: none;
     outline: none;
     padding: 4px 4px 4px 12px;
     box-sizing: border-box;
@@ -28,13 +27,16 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       border-color: $primary-color-50;
+      transition: all 0.2s ease-in-out;
     }
 
     &:focus {
       border-color: $primary-color-80;
+      transition: all 0.2s ease-in-out;
     }
 
     p {
@@ -61,11 +63,18 @@
       border: none;
       outline: none;
       cursor: pointer;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        filter: brightness(1.2);
+        transition: all 0.1s ease-in-out;
+      }
 
       span {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.1s ease-in-out;
       }
     }
 
@@ -91,12 +100,10 @@
   }
 
   .itemList {
-  }
-
-  .itemList {
     display: flex;
     flex-direction: column;
     position: absolute;
+    height: auto;
     left: 0;
     bottom: 0;
     transform: translateY(calc(100% + 8px));
@@ -108,6 +115,7 @@
     padding: 0 6px 0 11px;
     box-sizing: border-box;
     list-style: none;
+    transition: 0.1s all ease-in-out;
 
     li {
       cursor: pointer;
