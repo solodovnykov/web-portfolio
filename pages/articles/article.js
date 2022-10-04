@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/Article.module.scss";
 
-const article = (props) => {
+const article = () => {
   return (
-    <div className="container-article">
+    <div className="container-min">
       <div className={styles.article}>
         <div className={styles.head}>
           <Image
