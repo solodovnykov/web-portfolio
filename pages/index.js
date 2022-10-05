@@ -22,7 +22,7 @@ const fadeInUp = {
 export default function Home() {
   return (
     <motion.div
-      exit={{ opacity: 0, transition: {duration: 0.2} }}
+      exit={{ opacity: 0, transition: { duration: 0.2 } }}
       variants={fadeInUp}
       initial="initial"
       animate="animate">
@@ -33,7 +33,10 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <HeroBlock />
-        <LastWorks />
+
+        <div className="container">
+          <LastWorks />
+        </div>
 
         <div className={styles.bgAnim}>
           <div className={styles.saturnWrapper}>

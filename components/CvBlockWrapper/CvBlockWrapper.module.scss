@@ -1,0 +1,28 @@
+@import "../../styles/Constants.module.scss";
+
+.cvBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 52px 0 0 0;
+
+  .title {
+    color: $primary-color-80;
+    font-family: "Gilroy", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 33px;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    .title {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    
+    gap: 12px;
+  }
+}
