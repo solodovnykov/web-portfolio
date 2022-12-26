@@ -144,6 +144,7 @@ const Search = ({ data }) => {
         style={{
           height: inputValue && isOpen ? "auto" : "0",
           opacity: inputValue && isOpen ? "1" : "0",
+          pointerEvents: inputValue && isOpen ? "auto" : "none",
         }}
         className={styles.autocompleteList}>
         {filteredData

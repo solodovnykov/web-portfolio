@@ -3,6 +3,8 @@ import "../styles/Globals.scss";
 import { useRouter } from "next/router";
 import { IntlProvider } from "react-intl";
 import { AnimatePresence } from "framer-motion";
+import store from "../redux/store";
+import { Provider } from "react-redux";
 
 function MyApp({ Component, pageProps, router }) {
   const { locale } = useRouter();
@@ -11,7 +13,9 @@ function MyApp({ Component, pageProps, router }) {
       <div key={router.route}>
         <IntlProvider locale={locale}>
           <Layout>
-            <Component {...pageProps} />
+            <Provider store={store}>
+              <Component {...pageProps} />
+            </Provider>
           </Layout>
         </IntlProvider>
       </div>
