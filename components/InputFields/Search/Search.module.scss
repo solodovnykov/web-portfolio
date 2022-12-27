@@ -50,6 +50,7 @@
     transform: translateY(-50%);
     padding: 0 2px;
     color: $primary-color-40;
+    pointer-events: none;
 
     font-family: "SFProText", sans-serif;
     font-style: normal;

@@ -1,0 +1,28 @@
+@import "../../styles/Constants.module.scss";
+
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+  gap: 32px;
+  background-color: $primary-color-5;
+  border-radius: 12px;
+  border: 0.5px solid $primary-color-20;
+
+  .formTitle {
+    font-family: "Gilroy", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: $primary-color-80;
+  }
+
+  .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
